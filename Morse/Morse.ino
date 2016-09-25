@@ -22,8 +22,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  
+  // put your main code here, to run repeatedly:  
   for(j; j<=1; j++){
     Serial.println(StartPin);
     while(Serial.available()==0){ }
