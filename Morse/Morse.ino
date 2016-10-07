@@ -13,26 +13,26 @@ String Message = "Place Holder" ;                        // Declaring message th
 
 void setup() {
   Serial.begin(9600);
-  pinMode(WhitePin, OUTPUT);
-  int A = a();                                             //Initializing morse code for "A"
-  int B = b();                                             //Initializing morse code for "B"
+  pinMode(WhitePin, OUTPUT); 
 }
+
 
 void loop() {
   for(j; j<=1; j++){
-    Serial.println(StartPin);
-    while(Serial.available()==0){ }
+    Serial.println(StartPin);                              // Display Menu. 
+    while(Serial.available()==0){ }                        // While the input is nothing do nohing. 
     WhitePin = Serial.parseInt();                          // What number you enter becomes the pin that the command will output to 
     Serial.print(Connect), Serial.println(WhitePin);       // Displays text of what pin LED its connected to
   }
   
+  
   Serial.println("Input your message");                    // Ask what the message is 
   while(Serial.available()==0){}                           // Waits for message input 
-  Message = Serial.readString();                           // Message that will be translated 
+  Message = Serial.readString();                           // Message typed into serial.  
 
    for ( i=0; i<= Message.length(); i++){                  // Repeat printing the message for message length 
-    si(i);
-    calling(i);
+    si(i);                                                 // Call function that repeats the input.(Testing purposes)
+    calling(i, WhitePin);
     if(Message.charAt(i)== 'W'){                           // Checks if the individual character is certain letter. 
       Serial.println("This is a W and begin to finish this project");      
     }
@@ -43,13 +43,13 @@ void loop() {
 }
 
 void si(char x){                                           // This function repeats the words verifying its correctly working. 
-    Serial.println((Message[i]));
+    Serial.println((Message[i]));                          // This function is included for testig purposes. 
     if(x == 'O' || x == 'o'){
       Serial.print("This is an O");
     }
     delay(200);
 }
-void calling( char x){                                  // This function calls certain functions when needed 
+void calling( char x, int pin){                                  // This function calls certain functions when needed 
   switch (Message.charAt(x)) {
     case 'O': 
         Serial.println("The test works");
@@ -68,37 +68,22 @@ void calling( char x){                                  // This function calls c
 
 
 
-
-
-
-
-int a(){
-  digitalWrite(13,HIGH);
+void dot(int pin){                                      // di and dit 
+  digitalWrite(pin, HIGH);
   delay(250);
-  digitalWrite(13,LOW);
+  digitalWrite(pin, LOW);
   delay(250);
-  digitalWrite(13,HIGH);
-  delay(500);
-  digitalWrite(13,LOW);
-  delay(1000);
-};
-
-
-int b(){
-  digitalWrite(13,HIGH);
-  delay(2000);
-  digitalWrite(13,LOW);
-  delay(2000);
 }
 
+void dash(int pin){                                     // dah
+  digitalWrite(pin, HIGH);
+  delay(1000);
+  digitalWrite(pin, LOW);
+  delay(250);
+}
 
 void A(){
-  digitalWrite(13,HIGH);
-  delay(250);
-  digitalWrite(13,LOW);
-  delay(250);
-  digitalWrite(13,HIGH);
-  delay(500);
-  digitalWrite(13,LOW);
-  delay(1000);
+  dot(); dash();
 };
+
+
