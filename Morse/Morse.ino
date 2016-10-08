@@ -51,11 +51,13 @@ void si(char x){                                           // This function repe
 }
 void calling( char x, int pin){                                  // This function calls certain functions when needed 
   switch (Message.charAt(x)) {
-    case 'O': 
-        Serial.println("The test works");
+    case 'A': 
+        A();
       break;
-     case' ':
+    case'B':
       Serial.println("This is a space");
+    case 'C':
+      
     default:
         Serial.println();
       break;
@@ -66,7 +68,7 @@ void calling( char x, int pin){                                  // This functio
 
 
 
-
+// Definition of dits and dashes 
 
 void dot(int pin){                                      // di and dit 
   digitalWrite(pin, HIGH);
@@ -82,8 +84,107 @@ void dash(int pin){                                     // dah
   delay(250);
 }
 
+
+//  This section is related to alphabet and special characters
 void A(){
-  dot(); dash();
+  
 };
+
+void B(){
+  
+};
+
+void C() {
+  
+};
+
+void D() {
+  
+};
+
+void E() {
+  
+};
+
+void f() {
+  
+};
+
+void G() {
+  
+};
+
+void H() {
+  
+};
+
+void I() {
+  
+};
+
+void K() {
+  
+};
+
+void L() {
+  
+};
+
+void M() {
+  
+};
+
+void N() {
+  
+};
+
+void O(){
+  
+};
+
+void P(){
+  
+};
+
+void Q(){
+  
+};
+
+void R() {
+  
+};
+
+void S(){
+  
+};
+
+void T(){
+  
+};
+
+void U(){
+  
+};
+
+void V() {
+  
+};
+
+void W(){
+  
+};
+
+void X() {
+  
+};
+
+void Y() {
+  
+};
+
+void Z() {
+  
+};
+
 
 
