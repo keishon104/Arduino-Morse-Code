@@ -33,14 +33,16 @@ void loop() {
    for ( i=0; i<= Message.length(); i++){                  // Repeat printing the message for message length 
     si(i);                                                 // Call function that repeats the input.(Testing purposes)
     calling(i, WhitePin);
-    if(Message.charAt(i)== 'W'){                           // Checks if the individual character is certain letter. 
-      Serial.println("This is a W and begin to finish this project");      
-    }
   }
   
   delay(1000);
 
 }
+
+
+
+
+
 
 void si(char x){                                           // This function repeats the words verifying its correctly working. 
     Serial.println((Message[i]));                          // This function is included for testig purposes. 
@@ -52,14 +54,16 @@ void si(char x){                                           // This function repe
 void calling( char x, int pin){                                  // This function calls certain functions when needed 
   switch (Message.charAt(x)) {
     case 'A': 
-        A();
+        A(pin);
       break;
     case'B':
-      Serial.println("This is a space");
+        B(pin);
+      break;
     case 'C':
-      
+        C(pin);
+      break;
     default:
-        Serial.println();
+        Serial.println("This character is not reconized");
       break;
   }
 }
@@ -86,15 +90,16 @@ void dash(int pin){                                     // dah
 
 
 //  This section is related to alphabet and special characters
-void A(){
-  
+//  int x represents the pin number located 
+void A(int x){     
+  dot(x); dash(x);
 };
 
-void B(){
-  
+void B(int x){
+  dash(x); dot(x); dot(x); dot(x);
 };
 
-void C() {
+void C(int x) {
   
 };
 
@@ -185,6 +190,54 @@ void Y() {
 void Z() {
   
 };
+
+
+
+
+
+// Functions relating to numbers
+
+void zero() {
+  
+};
+
+void one() {
+  
+};
+
+void two() {
+  
+};
+
+void three() {
+  
+};
+
+void four() {
+  
+};
+
+void five() {
+  
+};
+
+void six() {
+  
+};
+
+void seven() {
+  
+};
+
+void eight() {
+  
+};
+
+void nine() {
+  
+};
+
+
 
 
 
