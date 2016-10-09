@@ -32,7 +32,7 @@ void loop() {
 
    for ( i=0; i<= Message.length(); i++){                  // Repeat printing the message for message length 
     si(i);                                                 // Call function that repeats the input.(Testing purposes)
-    calling(i, WhitePin);
+    calling(i, WhitePin);                                  // Calls function which calls characters's meaning. 
   }
   
   delay(1000);
@@ -51,6 +51,14 @@ void si(char x){                                           // This function repe
     }
     delay(200);
 }
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//----------------------------------- Function Definitions ----------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------
 void calling( char x, int pin){                                  // This function calls certain functions when needed 
   switch (Message.charAt(x)) {
     case 'A': 
@@ -61,6 +69,75 @@ void calling( char x, int pin){                                  // This functio
       break;
     case 'C':
         C(pin);
+      break;
+    case 'D': 
+        D(pin);
+      break;
+    case'E':
+        E(pin);
+      break;
+    case 'F':
+        f(pin);
+      break;
+    case 'G': 
+        G(pin);
+      break;
+    case'H':
+        H(pin);
+      break;
+    case 'I':
+        I(pin);
+      break;
+    case 'J': 
+        J(pin);
+      break;
+    case'K':
+        K(pin);
+      break;
+    case 'L':
+        L(pin);
+      break;
+    case 'M': 
+        M(pin);
+      break;
+    case'N':
+        N(pin);
+      break;
+    case 'O':
+        O(pin);
+      break;
+    case 'P': 
+        P(pin);
+      break;
+    case'Q':
+        Q(pin);
+      break;
+    case 'R':
+        R(pin);
+      break;
+    case 'S': 
+        S(pin);
+      break;
+    case'T':
+        T(pin);
+      break;
+    case 'U':
+        U(pin);
+      break;
+    case 'V': 
+        V(pin);
+      break;
+    case'W':
+        W(pin);
+      break;
+    case 'X':
+        X(pin);
+      break;
+    case 'Y': 
+        Y(pin);
+      break;
+    case'Z':
+        Z(pin);
       break;
     default:
         Serial.println("This character is not reconized");
@@ -91,6 +168,7 @@ void dash(int pin){                                     // dah
 
 //  This section is related to alphabet and special characters
 //  int x represents the pin number located 
+
 void A(int x){     
   dot(x); dash(x);
 };
@@ -100,94 +178,97 @@ void B(int x){
 };
 
 void C(int x) {
+  dash(x); dot(x); dash(x); dot(x);
+};
+
+void D(int x) {
+  dash(x); dot(x); dot(x);
+};
+
+void E(int x) {
+  dot(x);
+};
+
+void f(int x) {
+  dot(x); dot(x); dash(x); dot(x);
+};
+
+void G(int x) {
+  dash(x); dash(x); dot(x);
+};
+
+void H(int x) {
+  dot(x); dot(x); dot(x); dot(x);
+};
+
+void I(int x) {
+  dot(x); dot(x); 
+};
+
+void J(int x) {
+  dot(x); dash(x); dash(x); dash(x); 
+}
+void K(int x) {
+  dash(x); dot(x); dash(x); 
+};
+
+void L(int x) {
+  dot(x); dash(x); dot(x); dot(x); 
+};
+
+void M(int x) {
+  dash(x); dash(x); 
+};
+
+void N(int x) {
+  dash(x); dot(x);
+};
+
+void O(int x){
+  dash(x); dash(x); dash(x);  
+};
+
+void P(int x){
+  dot(x); dash(x); dash(x); dot(x); 
+};
+
+void Q(int x){
+  dash(x); dash(x); dot(x); dash(x); 
+};
+
+void R(int x) {
+  dot(x); dash(x); dot(x); 
+};
+
+void S(int x){
+  dot(x); dot(x); dot(x); 
+};
+
+void T(int x){
+  dash(x); 
+};
+
+void U(int x){
   
 };
 
-void D() {
+void V(int x) {
   
 };
 
-void E() {
+void W(int x){
   
 };
 
-void f() {
+void X(int x) {
   
 };
 
-void G() {
+void Y(int x) {
   
 };
 
-void H() {
-  
-};
-
-void I() {
-  
-};
-
-void K() {
-  
-};
-
-void L() {
-  
-};
-
-void M() {
-  
-};
-
-void N() {
-  
-};
-
-void O(){
-  
-};
-
-void P(){
-  
-};
-
-void Q(){
-  
-};
-
-void R() {
-  
-};
-
-void S(){
-  
-};
-
-void T(){
-  
-};
-
-void U(){
-  
-};
-
-void V() {
-  
-};
-
-void W(){
-  
-};
-
-void X() {
-  
-};
-
-void Y() {
-  
-};
-
-void Z() {
+void Z(int x) {
   
 };
 
