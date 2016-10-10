@@ -139,6 +139,69 @@ void calling( char x, int pin){                                  // This functio
     case'Z':
         Z(pin);
       break;
+    case '0': 
+        zero(pin);
+      break;
+    case'1':
+        one(pin);
+      break;
+    case '2':
+        two(pin);
+      break;
+    case '3': 
+        three(pin);
+      break;
+    case '4':
+        four(pin);
+      break;
+    case '5':
+        five(pin);
+      break;
+    case '6': 
+        six(pin);
+      break;
+    case '7':
+        seven(pin);
+      break;
+    case '8':
+        eight(pin);
+      break;
+    case '9': 
+        nine(pin);
+      break;
+    case '.': 
+        period(pin);
+      break;
+    case',':
+        comma(pin);
+      break;
+    case ':':
+        colon(pin);
+      break;
+    case '?': 
+        question_mark(pin);
+      break;
+    case '\'':
+        apostrophe(pin);
+      break;
+    case '-':
+        hyphen(pin);
+      break;
+    case '/': 
+        slash(pin);
+      break;
+    case '(' :               // Need to include right parenthesis 
+        brackets(pin);
+      break;
+    case '\"':
+        Quote_mark(pin);
+      break;
+    case '@': 
+        at(pin);
+      break;
+    case'=':
+        equal(pin);
+      break;
     default:
         Serial.println("This character is not reconized");
       break;
@@ -149,7 +212,7 @@ void calling( char x, int pin){                                  // This functio
 
 
 
-// Definition of dits and dashes 
+//---------------- Length of dit and dash values ----------------------
 
 void dot(int pin){                                      // di and dit 
   digitalWrite(pin, HIGH);
@@ -249,27 +312,27 @@ void T(int x){
 };
 
 void U(int x){
-  
+  dot(x); dot(x); dash(x); 
 };
 
 void V(int x) {
-  
+  dot(x); dot(x); dot(x); dash(x); 
 };
 
 void W(int x){
-  
+  dot(x); dash(x); dash(x); 
 };
 
 void X(int x) {
-  
+  dash(x); dot(x); dot(x); dash(x); 
 };
 
 void Y(int x) {
-  
+  dash(x); dot(x); dash(x); dash(x); 
 };
 
 void Z(int x) {
-  
+  dash(x); dash(x); dot(x); dot(x); 
 };
 
 
@@ -278,47 +341,90 @@ void Z(int x) {
 
 // Functions relating to numbers
 
-void zero() {
+void zero(int x) {
+  dash(x); dash(x); dash(x); dash(x); dash(x); 
+};
+
+void one(int x) {
+  dot(x); dash(x); dash(x); dash(x); dash(x); 
+};
+
+void two(int x) {
+  dot(x); dot(x); dash(x); dash(x); dash(x); 
+};
+
+void three(int x) {
+  dot(x); dot(x); dot(x); dash(x); dash(x); 
+};
+
+void four(int x) {
+  dot(x); dot(x); dot(x); dot(x); dash(x); 
+};
+
+void five(int x) {
+   dot(x); dot(x); dot(x); dot(x); dot(x); 
+};
+
+void six(int x) {
+  dash(x); dot(x); dot(x); dot(x); dot(x); 
+};
+
+void seven(int x) {
+  dash(x); dash(x); dot(x); dot(x); dot(x);
+};
+
+void eight(int x) {
+  dash(x); dash(x); dash(x);  dot(x); dot(x);
+};
+
+void nine(int x) {
+  dash(x); dash(x); dash(x); dash(x); dot(x); 
+};
+
+
+
+// Functions relating to special characters
+
+void period( int x) {
   
 };
 
-void one() {
+void comma( int x) {
   
 };
 
-void two() {
+void colon(int x) {
   
 };
 
-void three() {
+void question_mark( int x) {
   
 };
 
-void four() {
+void apostrophe( int x) {
   
 };
 
-void five() {
+void hyphen(int x) {
   
 };
 
-void six() {
+void slash(int x) {
   
 };
 
-void seven() {
+void brackets (int x) {
   
 };
 
-void eight() {
+void Quote_mark( int x) {
   
 };
 
-void nine() {
+void at(int x) {
   
 };
 
-
-
-
-
+void equal(int x) {
+  
+};
