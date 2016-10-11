@@ -33,14 +33,11 @@ void loop() {
    for ( i=0; i<= Message.length(); i++){                  // Repeat printing the message for message length 
     si(i);                                                 // Call function that repeats the input.(Testing purposes)
     calling(i, WhitePin);                                  // Calls function which calls characters's meaning. 
-  }
+   }
   
   delay(1000);
 
 }
-
-
-
 
 
 
@@ -64,7 +61,7 @@ void calling( char x, int pin){                                  // This functio
     case 'A': 
         A(pin);
       break;
-    case'B':
+    case 'B':
         B(pin);
       break;
     case 'C':
@@ -73,7 +70,7 @@ void calling( char x, int pin){                                  // This functio
     case 'D': 
         D(pin);
       break;
-    case'E':
+    case 'E':
         E(pin);
       break;
     case 'F':
@@ -82,7 +79,7 @@ void calling( char x, int pin){                                  // This functio
     case 'G': 
         G(pin);
       break;
-    case'H':
+    case 'H':
         H(pin);
       break;
     case 'I':
@@ -91,7 +88,7 @@ void calling( char x, int pin){                                  // This functio
     case 'J': 
         J(pin);
       break;
-    case'K':
+    case 'K':
         K(pin);
       break;
     case 'L':
@@ -100,7 +97,7 @@ void calling( char x, int pin){                                  // This functio
     case 'M': 
         M(pin);
       break;
-    case'N':
+    case 'N':
         N(pin);
       break;
     case 'O':
@@ -109,7 +106,7 @@ void calling( char x, int pin){                                  // This functio
     case 'P': 
         P(pin);
       break;
-    case'Q':
+    case 'Q':
         Q(pin);
       break;
     case 'R':
@@ -118,7 +115,7 @@ void calling( char x, int pin){                                  // This functio
     case 'S': 
         S(pin);
       break;
-    case'T':
+    case 'T':
         T(pin);
       break;
     case 'U':
@@ -127,7 +124,7 @@ void calling( char x, int pin){                                  // This functio
     case 'V': 
         V(pin);
       break;
-    case'W':
+    case 'W':
         W(pin);
       break;
     case 'X':
@@ -136,13 +133,13 @@ void calling( char x, int pin){                                  // This functio
     case 'Y': 
         Y(pin);
       break;
-    case'Z':
+    case 'Z':
         Z(pin);
       break;
     case '0': 
         zero(pin);
       break;
-    case'1':
+    case '1':
         one(pin);
       break;
     case '2':
@@ -172,7 +169,7 @@ void calling( char x, int pin){                                  // This functio
     case '.': 
         period(pin);
       break;
-    case',':
+    case ',':
         comma(pin);
       break;
     case ':':
@@ -190,7 +187,8 @@ void calling( char x, int pin){                                  // This functio
     case '/': 
         slash(pin);
       break;
-    case '(' :               // Need to include right parenthesis 
+    case '(' :
+    case ')' : 
         brackets(pin);
       break;
     case '\"':
@@ -199,7 +197,7 @@ void calling( char x, int pin){                                  // This functio
     case '@': 
         at(pin);
       break;
-    case'=':
+    case '=':
         equal(pin);
       break;
     default:
@@ -385,46 +383,46 @@ void nine(int x) {
 
 // Functions relating to special characters
 
-void period( int x) {
-  
+void period(int x) {      
+  dot(x); dash(x); dot(x); dash(x); dot(x); dash(x);
 };
 
-void comma( int x) {
-  
+void comma(int x) {
+  dash(x); dash(x); dot(x); dot(x); dash(x); dash(x); 
 };
 
 void colon(int x) {
-  
+  dash(x); dash(x); dash(x); dot(x); dot(x); dot(x); 
 };
 
-void question_mark( int x) {
-  
+void question_mark(int x) {
+  dot(x); dot(x); dash(x); dash(x); dot(x); dot(x); 
 };
 
-void apostrophe( int x) {
-  
+void apostrophe(int x) {
+  dot(x); dash(x); dash(x); dash(x); dash(x); dot(x); 
 };
 
 void hyphen(int x) {
-  
+  dash(x); dot(x); dot(x); dot(x); dot(x); dash(x);
 };
 
 void slash(int x) {
-  
+  dash(x); dot(x); dot(x); dash(x); dot(x); 
 };
 
 void brackets (int x) {
-  
+  dash(x); dot(x); dash(x); dash(x); dot(x); dash(x);
 };
 
 void Quote_mark( int x) {
-  
+  dot(x); dash(x); dot(x); dot(x); dash(x); dot(x); 
 };
 
 void at(int x) {
-  
+  dot(x); dash(x); dash(x); dot(x); dash(x); dot(x); 
 };
 
 void equal(int x) {
-  
+  dash(x); dot(x); dot(x); dot(x); dash(x); 
 };
