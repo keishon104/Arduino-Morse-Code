@@ -40,15 +40,15 @@ void loop() {
 }
 
 
-
+//------------------- Testing function ------------------
 void si(char x){                                           // This function repeats the words verifying its correctly working. 
-    Serial.println((Message[i]));                          // This function is included for testig purposes. 
+    Serial.println((Message[i]));                          // This function is included for testing purposes. 
     if(x == 'O' || x == 'o'){
       Serial.print("This is an O");
     }
     delay(200);
 }
-
+//--------------------------------------------------------
 
 
 
